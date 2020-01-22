@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{titulo_app}} - Cadastrar</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+    <div class="conteudo">
+        <form action="/salvar" method="get">
+            <input type="hidden" name="id" id="id" value="{{squad.id}}"> <br/>
+            <div class="descricoes"> 
+                <label for="Nome">Nome:</label>
+            </div>
+            <input type="text" name="Nome" id="Nome" placeholder="Digite o nome" value="{{squad.Nome}}"> <br/>
+            <div class="descricoes"> 
+                <label for="Descricao">Descricao:</label>
+            </div>
+            <input type="text" name="Descricao" id="Descricao" value="{{squad.Descricao}}"> <br/>
+            <div class="descricoes"> 
+                <label for="NumeroPessoas">NumeroPessoas:</label>
+            </div>
+            <input type="text" name="NumeroPessoas" id="NumeroPessoas" value="{{squad.NumeroPessoas if squad.NumeroPessoas != 0 else ''}}"> <br/>
+            
+            <div class="descricoes"> 
+               <label for ="BackEnd">BackEnd:</label>
+            </div>
+            <input type="text" name="BackEnd" id="BackEnd" value="{{squad.BackEnd}}"> <br/>
+            <div class="descricoes"> 
+                <label for="FrameWork">FrameWork:</label>
+            </div>
+            <input type="text" name="FrameWork" id="FrameWork" value="{{squad.FrameWork}}"> <br/>
+            <div class="descricoes"> 
+                <br/>
+
+            <hr/>
+            <input type="submit" value="Salvar" class="salvar">
+            <a href="/cadastrar" class="limpar">Limpar</a>
+        </form>
+    </div>
+</body>
+</html>
