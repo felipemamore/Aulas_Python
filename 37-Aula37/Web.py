@@ -41,15 +41,15 @@ def excluir():
 @app.route('/salvar')
 def salvar():
     squad = Squad()
-    dic = dict(request.args)
-    print('*\n'*10,dict(request.args),'*\n'*10)
+    dic = request.args.to_dict()
+    #print('*\n'*10,type(dic))
     squad.criar(**dic)
-    print('**\n'*10,squad,'**\n'*10)
+    #print('**\n'*10,squad,'**\n'*10)
     
     
 
    
-    if squad.id == 0:
+    if squad.id == '0':
         squad_controller.salvar(squad)
     else:
         squad_controller.alterar(squad)

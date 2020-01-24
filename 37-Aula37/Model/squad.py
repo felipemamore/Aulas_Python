@@ -5,17 +5,18 @@ class Squad:
         self.Descricao= ''
         self.NumeroPessoas = 0
         self.BackEnd = ''
-        self.Framework = ''
+        self.FrameWork = ''
         
-    def criar(self,Nome,Descricao,NumeroPessoas,BackEnd,Framework,id=0):
+    def criar(self,Nome,Descricao,NumeroPessoas,BackEnd,FrameWork,id=0):
         self.id = id
         self.Nome = Nome
         self.Descricao = Descricao
         self.NumeroPessoas = NumeroPessoas
         self.BackEnd = BackEnd
-        self.Framework = Framework
+        self.FrameWork = FrameWork
+        print('\n**'*10,self.__str__())
 
     def __str__(self):
-        return f'{self.id};{self.Nome};{self.Descricao};{self.NumeroPessoas};{self.BackEnd};{self.Framework}'
+        return f'{self.id};{self.Nome};{self.Descricao};{self.NumeroPessoas};{self.BackEnd};{self.FrameWork}'
 
 squad = Squad()

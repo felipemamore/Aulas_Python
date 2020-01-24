@@ -24,15 +24,15 @@ class SquadDao:
             Descricao,
             NumeroPessoas,
             BackEnd,
-            Framework
+            FrameWork
         )
         VALUES
         (
             '{squad.Nome}',
             '{squad.Descricao}',
             {squad.NumeroPessoas},
-            {squad.BackEnd},
-            {squad.Framework}
+            '{squad.BackEnd}',
+            '{squad.FrameWork}'
 
         )"""
         self.cursor.execute(comando)
@@ -43,11 +43,11 @@ class SquadDao:
     def alterar(self, squad:Squad):
         comando = f""" UPDATE squad
         SET
-            Nome = '{squad.nome}',
+            Nome = '{squad.Nome}',
             Descricao ='{squad.Descricao}',
             NumeroPessoas = {squad.NumeroPessoas},
             BackEnd = {squad.BackEnd}
-            Framework = {squad.Framework}
+            Framework = {squad.FrameWork}
         WHERE ID = {squad.id}
         """
         self.cursor.execute(comando)
